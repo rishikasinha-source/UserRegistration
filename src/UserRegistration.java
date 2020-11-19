@@ -70,7 +70,7 @@ public class UserRegistration {
 	//Password Validation 
 	
 	public void passwordValidator() {
-		String pattern= "^([A-Z]{1}[a-z]){7,}$";
+		String pattern= "^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z]).*$";
 		System.out.println("Enter the Password Format");
 		Scanner scanner=new Scanner(System.in);
 		String password=scanner.next();
@@ -82,6 +82,7 @@ public class UserRegistration {
 			passwordValidator();
 		}
 		}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Welcome to User Registration Problem");
