@@ -35,6 +35,21 @@ public class UserRegistration {
 			
 		}
 	
+	// Email Validation
+	
+	public void emailValidator() {
+		String pattern = "^[0-9a-zA-Z]+([._+-][0-9a-zA-Z])*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}(.[a-zA-Z]{2})*$";
+		System.out.println("Enter the Email Id:");
+		Scanner scanner=new Scanner(System.in);
+		String email=scanner.next();
+		if(email.matches(pattern)) {
+			System.out.println("Valid Email Id");
+		}
+		else {
+			System.out.println("Invalid Email Id");
+			emailValidator();
+		}
+	}
 	
 
 	public static void main(String[] args) {
@@ -44,6 +59,7 @@ public class UserRegistration {
 		UserRegistration user=new UserRegistration();
 		user.nameValidator();
 		user.nameValidator1();
+		user.emailValidator();
 
 	}
 
