@@ -70,7 +70,7 @@ public class UserRegistration {
 	//Password Validation 
 	
 	public void passwordValidator() {
-		String pattern= "^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z]).*$";
+		String pattern= "^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$";
 		System.out.println("Enter the Password Format");
 		Scanner scanner=new Scanner(System.in);
 		String password=scanner.next();
