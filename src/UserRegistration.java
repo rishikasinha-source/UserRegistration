@@ -51,6 +51,21 @@ public class UserRegistration {
 		}
 	}
 	
+	// Mobile Format
+	
+	public void mobileNumberValidator() {
+		 String pattern = "^([\\+]?91)[6-9]{1}[0-9]{9}$";
+		 System.out.println("Enter the Mobile Format");
+		 Scanner scanner=new Scanner(System.in);
+		String mobileNumber=scanner.next();
+		if(mobileNumber.matches(pattern)) {
+			System.out.println("Valid Mobile Format");
+		}
+		else {
+			System.out.println("Invalid Mobile Format");
+			mobileNumberValidator();
+		}		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -60,6 +75,7 @@ public class UserRegistration {
 		user.nameValidator();
 		user.nameValidator1();
 		user.emailValidator();
+		user.mobileNumberValidator();
 
 	}
 
