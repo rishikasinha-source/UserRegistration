@@ -67,6 +67,21 @@ public class UserRegistration {
 		}		
 	}
 
+	//Password Validation 
+	
+	public void passwordValidator() {
+		String pattern= "^([A-Z]{1}[a-z]){7,}$";
+		System.out.println("Enter the Password Format");
+		Scanner scanner=new Scanner(System.in);
+		String password=scanner.next();
+		if (password.matches(pattern)) {
+			System.out.println("Valid password format");
+		}
+		else {
+			System.out.println("Invalid Password format");
+			passwordValidator();
+		}
+		}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Welcome to User Registration Problem");
@@ -76,6 +91,7 @@ public class UserRegistration {
 		user.nameValidator1();
 		user.emailValidator();
 		user.mobileNumberValidator();
+		user.passwordValidator();
 
 	}
 
